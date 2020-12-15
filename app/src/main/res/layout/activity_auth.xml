@@ -4,15 +4,141 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/home_screen"
     tools:context=".AuthActivity">
 
     <TextView
+        android:id="@+id/btnSignIn"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/sign_in_button"
+        android:fontFamily="@font/andada_regular"
+        android:gravity="center"
+        android:text="@string/signInButton"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="SIGN IN" />
+
+    <TextView
+        android:id="@+id/btnRegister"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="195dp"
+        android:background="@drawable/register_button"
+        android:fontFamily="@font/andada_regular"
+        android:gravity="center"
+        android:text="@string/registerButton"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="REGISTER" />
+
+    <TextView
+        android:id="@+id/btnFacebook"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/register_button"
+        android:fontFamily="@font/andada_regular"
+        android:gravity="center|start"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/facebookSignIn"
+        android:textColor="#3B5998"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/facebook_logo_low"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/btnGoogle"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/register_button"
+        android:fontFamily="@font/andada_regular"
+        android:gravity="center|start"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/googleSignIn"
+        android:textColor="#EA4335"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/google_logo_low"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtForgot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/andada_regular"
+        android:text="@string/txtForgotPassword"
+        android:textColor="#fff"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="370dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="@font/average_regular"
+        android:hint="@string/txtEmail"
+        android:inputType="textEmailAddress"
+        android:shadowColor="#FFFFFF"
+        android:textColor="#fff"
+        android:textColorHighlight="#fff"
+        android:textColorHint="#fff"
+        android:textColorLink="#fff"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="310dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="@font/average_regular"
+        android:hint="@string/txtPassword"
+        android:inputType="textPassword"
+        android:textColor="#fff"
+        android:textColorHighlight="#fff"
+        android:textColorHint="#fff"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

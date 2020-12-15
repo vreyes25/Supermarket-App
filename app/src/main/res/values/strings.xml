@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">Supermarket App</string>
+    <string name="app_name">Global Market</string>
+    <string name="signInButton">SIGN IN</string>
+    <string name="registerButton">REGISTER</string>
+    <string name="facebookSignIn">FACEBOOK</string>
+    <string name="googleSignIn">GOOGLE</string>
+    <string name="txtForgotPassword">Forgot Password?</string>
+    <string name="logo">App Logo</string>
+    <string name="txtEmail">Email</string>
+    <string name="txtPassword">Password</string>
+    <string name="menuLines">Menu</string>
+    <string name="menuTitle">MENU</string>
+    <string name="title_text">Title Text</string>
+    <string name="firstSupermarket">LA COLONIA</string>
+    <string name="secondSupermarket">PAIZ</string>
+    <string name="thirdSupermarket">WALMART</string>
+    <string name="fourSupermarket">MAXI DESPENSA</string>
+    <string name="welcome_to_global_market">¡WELCOME TO GLOBAL MARKET!</string>
+    <string name="client_name">Client Name</string>
+    <string name="todo">TODO</string>
 </resources>
