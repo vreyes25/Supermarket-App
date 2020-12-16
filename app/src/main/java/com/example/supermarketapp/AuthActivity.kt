@@ -35,7 +35,7 @@ class AuthActivity : AppCompatActivity() {
         super.onStart()
         val user = FirebaseAuth.getInstance().currentUser
         if (user != null) {
-            val showHome = Intent(this, HomeActivity::class.java)
+            val showHome = Intent(this, CategoriesActivity::class.java)
             startActivity(showHome)
             finish()
         }
@@ -79,7 +79,7 @@ class AuthActivity : AppCompatActivity() {
         val credentials = GoogleAuthProvider.getCredential(account.idToken, null)
         auth.signInWithCredential(credentials).addOnCompleteListener{
             if (it.isSuccessful){
-                val homeScreen = Intent(this, HomeActivity::class.java)
+                val homeScreen = Intent(this, CategoriesActivity::class.java)
                 startActivity(homeScreen)
             } else {
                 Toast.makeText(this, "Error with the connection", Toast.LENGTH_LONG).show()
@@ -93,7 +93,7 @@ class AuthActivity : AppCompatActivity() {
                 FirebaseAuth.getInstance()
                     .createUserWithEmailAndPassword(txtEmail.text.toString(), txtPassword.text.toString()).addOnCompleteListener {
                         if (it.isSuccessful){
-                            val home = Intent(this, HomeActivity::class.java)
+                            val home = Intent(this, CategoriesActivity::class.java)
                             startActivity(home)
                         } else {
                             showAlert()
@@ -107,7 +107,7 @@ class AuthActivity : AppCompatActivity() {
                 FirebaseAuth.getInstance()
                     .signInWithEmailAndPassword(txtEmail.text.toString(), txtPassword.text.toString()).addOnCompleteListener {
                         if (it.isSuccessful){
-                            val home = Intent(this, HomeActivity::class.java)
+                            val home = Intent(this, CategoriesActivity::class.java)
                             startActivity(home)
                         } else {
                             showAlert()
