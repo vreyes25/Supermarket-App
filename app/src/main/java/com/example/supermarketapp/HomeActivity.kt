@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.supermarket_menu.*
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, MenuListener {
@@ -37,6 +38,11 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
         navView.setNavigationItemSelectedListener(this)
 
+        laColoniaCV.setOnClickListener {
+            val showCategories = Intent(this, CategoriesActivity::class.java)
+            startActivity(showCategories)
+        }
+
 
         val images = listOf<SupermarketModel>(
                 SupermarketModel("LA COLONIA", R.drawable.lacolonia_logo),
@@ -45,16 +51,16 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 SupermarketModel("MAXI DESPENSA", R.drawable.maxi_despensa_logo),
         )
 
-        val recyclerView = findViewById<RecyclerView>(R.id.menuRecyclerView)
+        /*val recyclerView = findViewById<RecyclerView>(R.id.menuRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
-        recyclerView.adapter = SupermarketAdapter(this, images)
+        recyclerView.adapter = SupermarketAdapter(this, images)*/
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> {
-                val backHome = Intent(this, HomeActivity::class.java)
+                val backHome = Intent(this, CategoriesActivity::class.java)
                 startActivity(backHome)
             }
             R.id.nav_shopping -> {
@@ -77,7 +83,6 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun menuOptionClicked(item: SupermarketModel, position: Int) {
-        val showCategories = Intent(this, CategoriesActivity::class.java)
-        startActivity(showCategories)
+
     }
 }

@@ -1,8 +1,10 @@
 package com.example.supermarketapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.supermarketapp.models.Categories
@@ -21,7 +23,7 @@ class CategoriesActivity : AppCompatActivity(), CategoryClickListener {
         db = FirebaseDatabase.getInstance()
         categoriesReference = db.getReference("Categories")
         categoryListener()
-        val adapter = ProductsRecyclerViewAdapter(ArrayList(), this)
+        val adapter = CategoriesRecyclerViewAdapter(ArrayList(), this)
         categoriesRecyclerView.layoutManager = GridLayoutManager(this, 2)
         categoriesRecyclerView.adapter = adapter
     }
@@ -40,7 +42,7 @@ class CategoriesActivity : AppCompatActivity(), CategoryClickListener {
                             autDat.add(category)
                         }
                     }
-                    val adapter = ProductsRecyclerViewAdapter(autDat, this@CategoriesActivity)
+                    val adapter = CategoriesRecyclerViewAdapter(autDat, this@CategoriesActivity)
                     categoriesRecyclerView.adapter = adapter
                 }
             }
@@ -57,8 +59,14 @@ class CategoriesActivity : AppCompatActivity(), CategoryClickListener {
         categoriesReference.addValueEventListener(listener)
     }
 
-
     override fun categoryClicked(category: Categories) {
-        TODO("Not yet implemented")
+        val intent = Intent(this, ProductsActivity::class.java)
+        intent.putExtra("Category", category)
+        startActivity(intent)
+    }
+
+    fun showMenu(view: View) {
+        val backToMenu = Intent(this, HomeActivity::class.java)
+        startActivity(backToMenu)
     }
 }

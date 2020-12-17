@@ -7,10 +7,10 @@ import com.example.supermarketapp.models.Categories
 import com.squareup.picasso.Picasso
 
 interface CategoryClickListener{
-    fun categoryClicked(product: Categories)
+    fun categoryClicked(category: Categories)
 }
 
-class ProductsRecyclerViewAdapter(private val categories: ArrayList<Categories>, private val listener: CategoryClickListener) : RecyclerView.Adapter<CategoriesViewHolder>(){
+class CategoriesRecyclerViewAdapter(private val categories: ArrayList<Categories>, private val listener: CategoryClickListener) : RecyclerView.Adapter<CategoriesViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriesViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -20,6 +20,7 @@ class ProductsRecyclerViewAdapter(private val categories: ArrayList<Categories>,
 
     override fun onBindViewHolder(holder: CategoriesViewHolder, position: Int) {
         val category = categories[position]
+        holder.codeCategory.text = category?.categoryId.toString()
         holder.categoryName.text = category?.categoryName
         Picasso.get().load(category.categoryPhoto).into(holder.categoryPhoto)
         holder.itemView.setOnClickListener {

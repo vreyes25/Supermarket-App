@@ -2,6 +2,7 @@ package com.example.supermarketapp.models
 
 import com.google.firebase.database.Exclude
 import com.google.firebase.database.IgnoreExtraProperties
+import kotlinx.android.parcel.Parcelize
 
 @IgnoreExtraProperties
 data class Products (

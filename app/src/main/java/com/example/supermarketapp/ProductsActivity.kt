@@ -19,6 +19,7 @@ class ProductsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products)
+        category = intent.getParcelableExtra<Categories>("Category")!!
 
         db = FirebaseDatabase.getInstance()
         productsRef = db.getReference("Products")
@@ -53,8 +54,8 @@ class ProductsActivity : AppCompatActivity() {
                             productData.add(product)
                         }
                     }
-                    //val adapter = ProductsRecyclerViewAdapter(productData)
-                    //productsRecyclerView.adapter = adapter
+                    val adapter = ProductRecyclerViewAdapter(productData)
+                    productsRecyclerView.adapter = adapter
                 }
             }
 

@@ -2,9 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_width="190dp"
-    android:layout_height="220dp"
-    app:cardCornerRadius="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    app:cardCornerRadius="15dp"
     android:layout_margin="10dp"
     android:layout_marginBottom="16dp">
 
@@ -12,8 +12,8 @@
         android:id="@+id/productImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_gravity="center|top"
-        android:layout_margin="15dp"
+        android:layout_gravity="center|left"
+        android:layout_margin="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,31 +23,30 @@
         android:layout_height="20dp"
         android:layout_margin="15dp"
         android:layout_gravity="bottom|right"
-        android:src="@drawable/go_arrow_black"
+        android:src="@drawable/heart_icon"
         android:textColor="@android:color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/productName"
-        android:layout_width="130dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="left|bottom"
-        android:layout_margin="16dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
         android:fontFamily="@font/andada_regular"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/productPrice"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="left|bottom"
+        android:layout_gravity="center|top"
         android:layout_margin="16dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/andada_regular"
         android:textColor="@color/black"
         android:textSize="18sp" />

@@ -39,4 +39,16 @@
         android:fontFamily="@font/andada_regular"
         android:textColor="@color/black"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/idCategoryTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_margin="16dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="@font/andada_regular"
+        android:textColor="@color/black"
+        android:textSize="10sp" />
 </androidx.cardview.widget.CardView>
