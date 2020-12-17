@@ -8,12 +8,12 @@
     tools:context=".CategoriesActivity">
 
     <TextView
-        android:id="@+id/categoriesTitle"
+        android:id="@+id/productScreenTitle"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:fontFamily="@font/anton"
         android:gravity="center"
-        android:text="CATEGORIES"
+        android:text="PRODUCTS"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintLeft_toRightOf="parent"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/categoriesRecyclerView"
+        android:id="@+id/productsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="720dp"
         android:layout_marginTop="15dp"

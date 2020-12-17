@@ -51,7 +51,7 @@ class CategoriesActivity : AppCompatActivity(), CategoryClickListener {
                     "Can't connect with the products database",
                     error.toException()
                 )
-                Toast.makeText(baseContext, "Failure trying to load products", Toast.LENGTH_LONG).show()
+                Toast.makeText(baseContext, "Failure trying to load categories", Toast.LENGTH_LONG).show()
             }
         }
         categoriesReference.addValueEventListener(listener)
